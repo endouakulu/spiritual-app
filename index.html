@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>
-        Spiritu'L - Landing page
+        Spiritu'L - La première application de méditation francophone pour les musulmans
     </title>
-    <meta name="description" content="Simple landind page"/>
-    <meta name="keywords" content=""/>
-    <meta name="author" content=""/>
+    <meta name="description"
+          content=" Bienvenue sur Spiritu'L la première application de méditation francophone pour les musulmans."/>
+    <meta name="keywords"
+          content="méditation musulmane, application méditation islamique, méditation coranique, zikir, bien-être spirituel islam"/>
+    <meta name="author" content="Spiritu'L"/>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <!--Replace with your tailwind.css once created-->
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
@@ -22,26 +25,12 @@
 
     <style>
         .gradient {
-            /*background: linear-gradient(90deg, #e1b9c7 0%, #641c1ca1 100%);*/
-            background: linear-gradient(90deg, #e1b9c7 0%, #c62222a1 100%);
-
+            background: linear-gradient(90deg, #fff3f7 0%, #ff6060a1 100%);
         }
 
         .montserrat {
             font-family: "Montserrat", sans-serif;
             font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        .lato-thin {
-            font-family: "Lato", sans-serif;
-            font-weight: 100;
-            font-style: normal;
-        }
-
-        .lato-light {
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
             font-style: normal;
         }
 
@@ -51,46 +40,8 @@
             font-style: normal;
         }
 
-        .lato-bold {
-            font-family: "Lato", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        .lato-black {
-            font-family: "Lato", sans-serif;
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        .lato-thin-italic {
-            font-family: "Lato", sans-serif;
-            font-weight: 100;
-            font-style: italic;
-        }
-
-        .lato-light-italic {
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        .lato-regular-italic {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .lato-bold-italic {
-            font-family: "Lato", sans-serif;
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        .lato-black-italic {
-            font-family: "Lato", sans-serif;
-            font-weight: 900;
-            font-style: italic;
+        .app-badge {
+            height: 3rem;
         }
 
         .flip-card {
@@ -113,8 +64,9 @@
             width: 100%;
             height: 100%;
             text-align: center;
-            transition: transform 0.8s;
+            transition: transform 0.9s;
             transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
         .flip-card:hover .flip-card-inner {
@@ -131,8 +83,19 @@
             height: 100%;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            border: 1px solid coral;
-            border-radius: 1rem;
+        }
+
+        .flip-card-front > img {
+            width: 408px;
+            height: 410px;
+        }
+
+        .glow {
+            background-color: #f5e6cc;
+            border-radius: 50%;
+            margin: 50px auto;
+            box-shadow: 0 0 20px #f5e6cc;
+            animation: glowing 2s ease-in-out infinite;
         }
 
         .flip-card-front {
@@ -154,17 +117,16 @@
 
     </style>
 </head>
-<body class="leading-normal tracking-normal text-black gradient lato-regular">
+<body class="leading-normal tracking-normal text-black lato-regular">
 <!--Nav-->
 <nav id="header" class="fixed w-full z-30 top-0 bg-white shadow-lg">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-        <div class="pl-4 flex items-center">
-            <!--Icon from: http://www.potlabicons.com/ -->
-            <img src="14.png" alt="plume logo spiritu'l" style="height: 3rem;">
+        <div class="pl-4 flex items-center mx-5">
+            <img src="14.png" alt="plume logo spiritu'l" style="height: 3rem;" class="s:hidden"/>
             <span class="text-pink-600 montserrat font-bold">Spiritu'L</span>
 
         </div>
-        <div class="block lg:hidden pr-4">
+        <div class="block lg:hidden pr-4 flex items-center">
             <button id="nav-toggle"
                     class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -177,11 +139,16 @@
              id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">A propos</a>
+                    <a class="inline-block text-black no-underline hover:text-pink-600 montserrat py-2 px-4  text-xl"
+                       href="#a-propos">A propos</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                       href="#">Fonctionnalités</a>
+                    <a class="inline-block text-black no-underline hover:text-pink-600 montserrat hover:text-underline py-2 px-4 text-xl"
+                       href="#programmes">Les programmes</a>
+                </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-pink-600 montserrat hover:text-underline py-2 px-4 text-xl"
+                       href="#concept">Le concept</a>
                 </li>
             </ul>
         </div>
@@ -189,7 +156,7 @@
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/>
 </nav>
 <!--Hero-->
-<div class="pt-24">
+<header class="pt-24 bg-gray-100">
     <div class="container px-4 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -199,92 +166,155 @@
             <p class="leading-normal text-2xl mb-8 color-black">La première application de méditation francophone pour
                 les <span class="text-pink-600 montserrat font-bold">musulmans.</span></p>
 
-
-            <div class="flex flex-col flex-lg-row align-items-center">
-                <a class="me-lg-3 mb-4 mb-lg-0" target="_blank" href="#">
-                    <img class="app-badge" src="google-play-badge.svg" alt="...">
-                </a>
-                <a href="#">
-                    <img class="app-badge" src="app-store-badge.svg" alt="...">
-                </a>
-            </div>
-
-
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-            <img class="w-full md:w-12/5 z-50 md:object-scale-down" src="13-d4WQu7IWl-transformed.png"/>
+            <img class="w-full md:w-12/5 z-50 md:object-scale-down" src="13-d4WQu7IWl-transformed.png"
+                 alt="téléphone avec l'application Spiritu'L"/>
         </div>
     </div>
-</div>
-<div class="relative -mt-12 lg:-mt-24">
-    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
-    >
+    </div>
+</header>
+
+    <!-- A PROPOS -->
+
+    <section class="py-8 gradient" id="a-propos">
+        <div class="container max-w-5xl mx-auto m-8">
+            <p class="w-full my-2 text-4xl md:text-5xl lg:text-6xl leading-tight text-center">
+                Le Divin au <span class="text-pink-600 montserrat">coeur</span> de ton quotidien</p>
+            <div class="w-full mb-4">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-8">
+        <div class="container max-w-5xl mx-auto m-8">
+            <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
+                Qu'est ce que Spiritu'L ?
+            </h2>
+            <div class="w-full mb-4">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+                     style="background: linear-gradient(90deg, #dddddd 0%, #ffffff 100%);">>
+                </div>
+            </div>
+            <div>
+                Offre une approche holistique combinant santé mentale et spiritualité musulmane
+                Spiritu'L vous accompagne au quotidien pour
+                <ul>
+                    <li>gérer le stress</li>
+                    <li>améliorer la concentration dans la prière,
+                    <li>alléger la charge mentale,
+                    <li>se détendre</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         style="background-color: white;">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-                      opacity="0.100000001"></path>
-                <path
-                        d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                        opacity="0.100000001"
-                ></path>
-                <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-                      id="Path-4" opacity="0.200000003"></path>
-            </g>
-            <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                <path
-                        d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
-                ></path>
+            <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+                <g class="wave" fill="#fffff">
+                    <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
+                </g>
+                <g transform="translate(1.000000, 15.000000)" fill="#ffa7b8">
+                    <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+                        <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                              opacity="0.100000001"></path>
+                        <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                              opacity="0.100000001"></path>
+                        <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                              opacity="0.200000003"></path>
+                    </g>
+                </g>
             </g>
         </g>
     </svg>
-</div>
-<section class="bg-white border-b py-8">
-    <div class="container max-w-5xl mx-auto m-8">
-        <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-gray-800">
-            A propos
-        </h2>
-        <div class="w-full mb-4">
-            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="flex flex-wrap">
-            <div class="w-7/6 p-6">
-                <p class="text-gray-600 mb-8 text-2xl lato-regular">
-                    <span class="text-pink-600 montserrat">Spiritu'L</span> est née du désir de combler un vide
-                    dans les applications de méditation "laïques", souvent dépourvues de <span class="font-bold">spiritualité</span>.
-                    Pour nous, musulmans, <span class="font-bold">la foi</span> est essentielle à notre <span
-                        class="font-bold">bien-être</span> et
-                    à notre cheminement personnel.<br/>
-                    <span class="text-pink-600 montserrat">Spiritu'L</span> place le <span
-                        class="text-pink-600 montserrat">Divin</span> au cœur de chaque méditation, vous aidant
-                    à chercher <span class="font-bold">Sa</span> présence. Que ce soit pour <span class="font-bold">gérer le stress</span>,
-                    organiser des moments de <span class="font-bold">spiritualité</span>,
-                    <span class="font-bold">améliorer la concentration</span> dans la prière,
-                    <span class="font-bold">alléger</span> la charge mentale, ou simplement <span class="font-bold">se détendre</span>,
-                    <span class="text-pink-600 montserrat">Spiritu'L</span> est là pour vous accompagner.
 
-                </p>
+    <section class="py-8">
+        <div class="container max-w-5xl mx-auto m-8">
+            <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
+                Fonctionnalités
+            </h2>
+            <div class="w-full mb-4">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+                     style="background: linear-gradient(90deg, #dddddd 0%, #ffffff 100%);">>
+                </div>
             </div>
+            <div>
+                Offre une approche holistique combinant santé mentale et spiritualité musulmane
+                Spiritu'L vous accompagne au quotidien pour
+                <ul>
+                    <li>gérer le stress</li>
+                    <li>améliorer la concentration dans la prière,
+                    <li>alléger la charge mentale,
+                    <li>se détendre</li>
+                </ul>
+            </div>
+
+
+            <div class="p-1 flex flex-wrap items-center justify-center">
+
+                <div class="flex-shrink-0 m-3 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group bg-white">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                              fill="white"/>
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+                    </svg>
+                    <p class="lato-regular text-3xl p-3 text-center">Meditat<span class="text-pink-400">i</span>on
+                        guidée</p>
+
+                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img class="relative w-800" src="4.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="flex-shrink-0 m-1 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group  bg-white">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                              fill="white"/>
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+                    </svg>
+                    <p class="lato-regular text-3xl p-3 text-center">Dh<span style="color: #a4c9a8">i</span>kr</p>
+
+                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img class="relative w-800" src="6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 m-3 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group  bg-white">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                              fill="white"/>
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+                    </svg>
+                    <p class="lato-regular text-3xl p-3 text-center">Resp<span style="color: #0097b2">i</span>ration</p>
+                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img class="relative w-800" src="7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</section>
+    </section>
+
 <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
->
+     style="background-color: white;">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-            <g class="wave" fill="#f8fafc">
-                <path
-                        d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
-                ></path>
+            <g class="wave" fill="#fffff">
+                <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
             </g>
-            <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g transform="translate(1.000000, 15.000000)" fill="#ffa7b8">
                 <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
                     <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
                           opacity="0.100000001"></path>
-                    <path
-                            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                            opacity="0.100000001"
-                    ></path>
+                    <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                          opacity="0.100000001"></path>
                     <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
                           opacity="0.200000003"></path>
                 </g>
@@ -293,198 +323,170 @@
     </g>
 </svg>
 
+    <section id="faq" class="container relative mx-auto py-12 px-2">
 
-<section class="border-b py-8" style="background: linear-gradient(90deg, #e1b9c7 0%, #dd6c6ca1 100%);">
-    <div class="container max-w-5xl mx-auto m-8">
         <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
-            Fonctionnalités
+            Frequently Asked Questions
         </h2>
-        <div class="w-full mb-4">
-            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-                 style="background: linear-gradient(90deg, #dddddd 0%, #ffffff 100%);">>
+
+
+        <div class="my-6">
+            <div
+                    class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
+                <h4 class="text-lg font-medium">How do I create an account on the website?</h4>
             </div>
-        </div>
-        <div class="flex flex-wrap m-8">
-            <div class="w-7/6 p-6">
-                <p class="text-white-800 mb-8 text-2xl lato-regular" style="color: white">
-                    Profitez de méditations guidées intégrant respiration consciente et invocations, pour
-                    vous rapprocher du <span class="text-pink-600 montserrat">Divin</span>.
-                    Ces pratiques sont puisées des enseignements intemporels de Maurice Gloton sur les 99
-                    noms d'<span class="text-pink-600 montserrat">Allah</span>, ainsi que de la plateforme <span
-                        class="text-pink-600 montserrat">Rahma TV</span> fondée par le Professeur Raouti
-                    Rezali.
-                    Destinée aux fidèles en quête d'épanouissement <span
-                        class="text-pink-600 montserrat">Spiritu'l</span> c'est la première application
-                    de meditation pour emplir son coeur du <span class="text-pink-600 montserrat">Divin</span>
-                    Notre application harmonise les pratiques méditatives spirituelle et la mindfulness,
-                    offrant une expérience unique où foi et sérénité se rejoignent.
-                </p>
+            <div
+                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                <h5>
+                    To create an account, click on the "Sign Up" button located at the top right corner of the homepage.
+                    <br>
+                    Fill out the required information, including your name, email address, and password.
+                    <br>
+                    Click "Create Account" to complete the registration process.
+                </h5>
             </div>
         </div>
 
 
-</section>
-
-<div class="relative -mt-12 lg:-mt-24">
-    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
-    >
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-                      opacity="0.100000001"></path>
-                <path
-                        d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                        opacity="0.100000001"
-                ></path>
-                <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-                      id="Path-4" opacity="0.200000003"></path>
-            </g>
-            <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                <path
-                        d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
-                ></path>
-            </g>
-        </g>
-    </svg>
-</div>
+        <div class="my-6">
+            <div
+                    class="rounded-t-2xl bg-teal-600/80 w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
+                <h4 class="text-lg font-medium">What payment methods do you accept?</h4>
+            </div>
+            <div
+                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                <h5>We accept several payment methods for your convenience, including credit cards (Visa, Mastercard,
+                    American Express), PayPal, and Apple Pay.
+                </h5>
+            </div>
+        </div>
 
 
-<!-- Change the colour #f8fafc to match the previous section colour -->
-<svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
->
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-            <g class="wave" fill="#f8fafc">
-                <path
-                        d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
-                ></path>
-            </g>
-            <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
-                <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
-                    <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-                          opacity="0.100000001"></path>
-                    <path
-                            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                            opacity="0.100000001"
-                    ></path>
-                    <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-                          opacity="0.200000003"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+        <div class="my-6">
+            <div
+                    class="rounded-t-2xl bg-teal-600/80 w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
+                <h4 class="text-lg font-medium">How long does shipping take?</h4>
+            </div>
+            <div
+                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                <h5>
+                    Shipping times may vary depending on your location and the product you ordered.
+                    <br>
+                    We strive to process and ship orders within 1-2 business days after payment confirmation.
+                </h5>
+            </div>
+        </div>
 
-<!--Footer-->
-<footer class="bg-white">
-    <div class="container mx-auto px-8">
-        <p class="leading-normal text-2xl mb-8 color-black text-center">La première application de méditation
+
+    </section>
+
+    <!--Footer-->
+    <footer class="text-center py-5" style="background-color: #fff3f7">
+        <p class="text-2xl mb-8 color-black w-full text-center">La première application de méditation
             francophone pour les <span class="text-pink-600 montserrat font-bold">musulmans.</span>
-
         </p>
-        <div class="flex flex-col flex-lg-row align-items-start w-5/6 ">
-            <a class="me-lg-3 mb-4 mb-lg-0" target="_blank" href="#">
-                <img class="app-badge" src="google-play-badge.svg" alt="...">
-            </a>
-            <a href="#">
-                <img class="app-badge" src="app-store-badge.svg" alt="...">
-            </a>
-        </div>
+        <div class="container px-5 w-full text-center">
 
 
-        <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="mb-2">© Spiritu'L 2024. All Rights Reserved.</div>
+                <a href="privacy_policy">Privacy</a>
+                <span class="mx-1">·</span>
+                <a href="terms_and_conditions">Terms</a>
 
         </div>
-</footer>
-<!-- jQuery if you need it
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
--->
-<script>
-    var scrollpos = window.scrollY;
-    var header = document.getElementById("header");
-    var navcontent = document.getElementById("nav-content");
-    var navaction = document.getElementById("navAction");
-    var brandname = document.getElementById("brandname");
-    var toToggle = document.querySelectorAll(".toggleColour");
+    </footer>
 
-    document.addEventListener("scroll", function () {
-        /*Apply classes for slide in bar*/
-        scrollpos = window.scrollY;
+    <!-- jQuery if you need it
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    -->
+    <script>
+        var scrollpos = window.scrollY;
+        var header = document.getElementById("header");
+        var navcontent = document.getElementById("nav-content");
+        var navaction = document.getElementById("navAction");
+        var brandname = document.getElementById("brandname");
+        var toToggle = document.querySelectorAll(".toggleColour");
 
-        if (scrollpos > 10) {
-            /*
-              header.classList.add("bg-white");
-              navaction.classList.remove("bg-white");
-              navaction.classList.add("gradient");
-              navaction.classList.remove("text-gray-800");
-              navaction.classList.add("text-white");
-              //Use to switch toggleColour colours
-              for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-gray-800");
-                toToggle[i].classList.remove("text-white");
-              }
-              header.classList.add("shadow");
-              navcontent.classList.remove("bg-gray-100");
-              navcontent.classList.add("bg-white");
-            */
-        } else {
-            /*
-              header.classList.remove("bg-white");
-              navaction.classList.remove("gradient");
-              navaction.classList.add("bg-white");
-              navaction.classList.remove("text-white");
-              navaction.classList.add("text-gray-800");
-              //Use to switch toggleColour colours
-              for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-white");
-                toToggle[i].classList.remove("text-gray-800");
-              }
-    
-              header.classList.remove("shadow");
-              navcontent.classList.remove("bg-white");
-              navcontent.classList.add("bg-gray-100");
-            */
-        }
-    });
-</script>
-<script>
-    /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+        document.addEventListener("scroll", function () {
+            /*Apply classes for slide in bar*/
+            scrollpos = window.scrollY;
 
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
+            if (scrollpos > 10) {
+                /*
+                  header.classList.add("bg-white");
+                  navaction.classList.remove("bg-white");
+                  navaction.classList.add("gradient");
+                  navaction.classList.remove("text-gray-800");
+                  navaction.classList.add("text-white");
+                  //Use to switch toggleColour colours
+                  for (var i = 0; i < toToggle.length; i++) {
+                    toToggle[i].classList.add("text-gray-800");
+                    toToggle[i].classList.remove("text-white");
+                  }
+                  header.classList.add("shadow");
+                  navcontent.classList.remove("bg-gray-100");
+                  navcontent.classList.add("bg-white");
+                */
+            } else {
+                /*
+                  header.classList.remove("bg-white");
+                  navaction.classList.remove("gradient");
+                  navaction.classList.add("bg-white");
+                  navaction.classList.remove("text-white");
+                  navaction.classList.add("text-gray-800");
+                  //Use to switch toggleColour colours
+                  for (var i = 0; i < toToggle.length; i++) {
+                    toToggle[i].classList.add("text-white");
+                    toToggle[i].classList.remove("text-gray-800");
+                  }
 
-    document.onclick = check;
+                  header.classList.remove("shadow");
+                  navcontent.classList.remove("bg-white");
+                  navcontent.classList.add("bg-gray-100");
+                */
+            }
+        });
+    </script>
+    <script>
+        /*Toggle dropdown list*/
+        /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-    function check(e) {
-        var target = (e && e.target) || (event && event.srcElement);
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
 
-        //Nav Menu
-        if (!checkParent(target, navMenuDiv)) {
-            // click NOT on the menu
-            if (checkParent(target, navMenu)) {
-                // click on the link
-                if (navMenuDiv.classList.contains("hidden")) {
-                    navMenuDiv.classList.remove("hidden");
+        document.onclick = check;
+
+        function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
+
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, navMenu)) {
+                    // click on the link
+                    if (navMenuDiv.classList.contains("hidden")) {
+                        navMenuDiv.classList.remove("hidden");
+                    } else {
+                        navMenuDiv.classList.add("hidden");
+                    }
                 } else {
+                    // click both outside link and outside menu, hide menu
                     navMenuDiv.classList.add("hidden");
                 }
-            } else {
-                // click both outside link and outside menu, hide menu
-                navMenuDiv.classList.add("hidden");
             }
         }
-    }
 
-    function checkParent(t, elm) {
-        while (t.parentNode) {
-            if (t == elm) {
-                return true;
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t == elm) {
+                    return true;
+                }
+                t = t.parentNode;
             }
-            t = t.parentNode;
+            return false;
         }
-        return false;
-    }
-</script>
+    </script>
+
+
 </body>
 </html>
