@@ -115,6 +115,53 @@
             height: 3rem;
         }
 
+        .plume-logo {
+            height: 3rem;
+        }
+
+        .plume-logo-small {
+            height: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .bg-pink-light {
+            background-color: #fff6f8;
+        }
+
+        .bg-green-light {
+            background-color: #a4c9a814;
+        }
+
+        .bg-blue-light {
+            background-color: #0097b21a;
+        }
+
+        .border-gradient-pink {
+            background: linear-gradient(90deg, #ffb4be 0%, #ffb4be 100%);
+        }
+
+        .border-gradient-green {
+            background: linear-gradient(90deg, #a4c9a8 0%, #a4c9a8 100%);
+        }
+
+        .border-gradient-blue {
+            background: linear-gradient(90deg, #0097b2 0%, #0097b2 100%);
+        }
+
+        .text-green {
+            color: #a4c9a8;
+            font-weight: 550;
+        }
+
+        .text-blue {
+            color: #0097b2;
+            font-weight: 550;
+        }
+
+        .bg-footer {
+            background-color: #ffedf1;
+        }
+
     </style>
 </head>
 <body class="leading-normal tracking-normal text-black lato-regular">
@@ -122,7 +169,7 @@
 <nav id="header" class="fixed w-full z-30 top-0 bg-white shadow-lg">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center mx-5">
-            <img src="14.png" alt="plume logo spiritu'l" style="height: 3rem;" class="s:hidden"/>
+            <img src="15.png" alt="plume logo spiritu'l" class="plume-logo s:hidden"/>
             <span class="text-pink-600 montserrat font-bold">Spiritu'L</span>
 
         </div>
@@ -143,6 +190,10 @@
                        href="#a-propos">A propos</a>
                 </li>
                 <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-pink-600 montserrat py-2 px-4  text-xl"
+                       href="#bienfaits">Les bienfaits</a>
+                </li>
+                <li class="mr-3">
                     <a class="inline-block text-black no-underline hover:text-pink-600 montserrat hover:text-underline py-2 px-4 text-xl"
                        href="#programmes">Les programmes</a>
                 </li>
@@ -150,6 +201,12 @@
                     <a class="inline-block text-black no-underline hover:text-pink-600 montserrat hover:text-underline py-2 px-4 text-xl"
                        href="#concept">Le concept</a>
                 </li>
+                <li class="mr-3">
+                    <a class="inline-block text-black no-underline hover:text-pink-600 montserrat hover:text-underline py-2 px-4 text-xl"
+                       href="#faq">FAQ</a>
+                </li>
+            </ul>
+
             </ul>
         </div>
     </div>
@@ -160,10 +217,11 @@
     <div class="container px-4 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <h1 class="my-4 text-5xl font-bold leading-tight">
+            <h1 class="my-4 text-5xl font-bold leading-tight montserrat">
                 Bienvenue sur <span class="text-pink-600 montserrat">Spiritu'L</span>
             </h1>
-            <p class="leading-normal text-2xl mb-8 color-black">La première application de méditation francophone pour
+            <p class="leading-normal text-2xl mb-8 color-black montserrat">La première application de méditation
+                francophone pour
                 les <span class="text-pink-600 montserrat font-bold">musulmans.</span></p>
 
         </div>
@@ -180,35 +238,37 @@
 
     <section class="py-8 gradient" id="a-propos">
         <div class="container max-w-5xl mx-auto m-8">
-            <p class="w-full my-2 text-4xl md:text-5xl lg:text-6xl leading-tight text-center">
-                Le Divin au <span class="text-pink-600 montserrat">coeur</span> de ton quotidien</p>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            <p class="w-full my-2 text-2xl md:text-5xl lg:text-6xl leading-tight text-center montserrat">
+                Le Divin au <span class="text-pink-600 montserrat font-bold">coeur</span> de votre quotidien</p>
+            <div class="flex justify-center items-center">
+                <!-- EFFECT SLIDEINOUT POUR LA PLUME -->
+                <img src="14-test-removebg-preview.png" alt="plume logo spiritu'l" class="plume-logo"/>
             </div>
         </div>
     </section>
 
 
-    <section class="py-8">
-        <div class="container max-w-5xl mx-auto m-8">
-            <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
-                Qu'est ce que Spiritu'L ?
+<section class="py-8" id="bienfaits">
+    <div class="container mx-auto m-8">
+        <h2 class="w-full my-2 text-6xl font-medium leading-tight text-center text-white-800 montserrat">
+            Ce que vous obtenez avec Spiritu'L
             </h2>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-                     style="background: linear-gradient(90deg, #dddddd 0%, #ffffff 100%);">>
+
+        <div class="w-full my-8 text-3xl">
+            Offre une approche holistique combinant méditation et spiritualité musulmane. Spiritu'L vous accompagne au
+            quotidien pour
                 </div>
-            </div>
-            <div>
-                Offre une approche holistique combinant santé mentale et spiritualité musulmane
-                Spiritu'L vous accompagne au quotidien pour
-                <ul>
-                    <li>gérer le stress</li>
-                    <li>améliorer la concentration dans la prière,
-                    <li>alléger la charge mentale,
-                    <li>se détendre</li>
-                </ul>
-            </div>
+
+        <ul class="list-disc text-2xl">
+            <li>Méditations guidées inspirées des enseignements de Maurice Gloton et des 99 Noms d'ALLAH</li>
+            <li>Techniques de relaxation pour alléger votre charge mentale et mieux gérer vos émotions.</li>
+            <li>Amélioration de la concentration dans vos prières et vos moments spirituels.</li>
+            <li>Un accompagnement quotidien, que ce soit pour se détendre ou pour renforcer votre foi.</li>
+        </ul>
+    </div>
+    <div class="flex justify-center items-center">
+        <!-- EFFECT SLIDEINOUT POUR LA PLUME -->
+        <img src="14-test-removebg-preview.png" alt="plume logo spiritu'l" class="plume-logo"/>
         </div>
     </section>
 
@@ -233,74 +293,84 @@
         </g>
     </svg>
 
-    <section class="py-8">
-        <div class="container max-w-5xl mx-auto m-8">
-            <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
+<section class="py-8 bg-gray-100" id="fonctionnalites">
+    <div class="container mx-auto m-8">
+        <h2 class="w-full my-2 text-6xl font-medium leading-tight text-center text-white-800 montserrat">
                 Fonctionnalités
             </h2>
             <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-                     style="background: linear-gradient(90deg, #dddddd 0%, #ffffff 100%);">>
-                </div>
-            </div>
-            <div>
-                Offre une approche holistique combinant santé mentale et spiritualité musulmane
-                Spiritu'L vous accompagne au quotidien pour
-                <ul>
-                    <li>gérer le stress</li>
-                    <li>améliorer la concentration dans la prière,
-                    <li>alléger la charge mentale,
-                    <li>se détendre</li>
-                </ul>
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
             </div>
 
 
-            <div class="p-1 flex flex-wrap items-center justify-center">
-
-                <div class="flex-shrink-0 m-3 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group bg-white">
-                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
-                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                              fill="white"/>
-                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
-                    </svg>
-                    <p class="lato-regular text-3xl p-3 text-center">Meditat<span class="text-pink-400">i</span>on
-                        guidée</p>
-
-                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img class="relative w-800" src="4.jpg" alt="">
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow bg-pink-light">
+                    <div class="w-full mb-4">
+                        <div class="h-1 gradient w-128 opacity-35 my-0 py-0 rounded-t border-gradient-pink"></div>
                     </div>
-
-                </div>
-                <div class="flex-shrink-0 m-1 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group  bg-white">
-                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
-                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                              fill="white"/>
-                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
-                    </svg>
-                    <p class="lato-regular text-3xl p-3 text-center">Dh<span style="color: #a4c9a8">i</span>kr</p>
-
-                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img class="relative w-800" src="6.jpg" alt="">
+                    <h1 class="w-full text-4xl px-6 text-center">
+                        Meditat<span class="text-pink-400 font-medium">i</span>on guidée
+                    </h1>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        <img class="w-full md:w-12/5 z-50 md:object-scale-down" src="fil.png">
                     </div>
-                </div>
-                <div class="flex-shrink-0 m-3 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg group  bg-white">
-                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                         viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
-                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                              fill="white"/>
-                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
-                    </svg>
-                    <p class="lato-regular text-3xl p-3 text-center">Resp<span style="color: #0097b2">i</span>ration</p>
-                    <div class="relative p-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img class="relative w-800" src="7.jpg" alt="">
+                    <p class="text-gray-800 text-base px-6 mb-5 font-light my-3">
+                        Séances audio pour apaiser l'esprit, favoriser le moment présent et gérer le stress avec un guidage progressif.
+                    </p>
+                    <div class="flex justify-center items-center">
+                        <!-- EFFECT SLIDEINOUT POUR LA PLUME -->
+                        <img src="14-test-removebg-preview.png" alt="plume logo spiritu'l" class="plume-logo-small"/>
+                    </div>
+            </div>
+            </div>
+            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow bg-green-light">
+                    <div class="w-full mb-4">
+                        <div class="h-1 gradient w-128 opacity-35 my-0 py-0 rounded-t border-gradient-green"></div>
+                    </div>
+                    <h1 class="w-full text-4xl px-6 text-center">
+                        Dh<span class="text-green">i</span>kr
+                    </h1>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        <img class="relative w-800" src="17.png" alt=""/>
+
+
+                    </div>
+                    <p class="text-gray-800 text-base px-6 mb-5 font-light  my-3">
+                        Pratique spirituelle répétant des noms divins pour renforcer la connexion avec Allah et cultiver la paix intérieure.
+                    </p>
+                    <div class="flex justify-center items-center">
+                        <!-- EFFECT SLIDEINOUT POUR LA PLUME -->
+                        <img src="14-test-removebg-preview.png" alt="plume logo spiritu'l" class="plume-logo-small"/>
                     </div>
                 </div>
             </div>
-
+            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow bg-blue-light">
+                    <div class="w-full mb-4">
+                        <div class="h-1 gradient w-128 opacity-35 my-0 py-0 rounded-t border-gradient-blue"></div>
+                </div>
+                    <h1 class="w-full text-4xl px-6 text-center">
+                        Resp<span class="text-blue">i</span>ration
+                    </h1>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        <img class="relative w-800" src="18.png" alt=""/>
+                    </div>
+                    <p class="text-gray-800 text-base px-6 mb-5 font-light  my-3">
+                        Exercices pour calmer l'esprit, réguler le stress et améliorer la concentration grâce à des techniques de respiration variées.file.png
+                    </p>
+                    <div class="flex justify-center items-center">
+                        <!-- EFFECT SLIDEINOUT POUR LA PLUME -->
+                        <img src="14-test-removebg-preview.png" alt="plume logo spiritu'l" class="plume-logo-small"/>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+
+</section>
+
 
 <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
      style="background-color: white;">
@@ -325,67 +395,130 @@
 
     <section id="faq" class="container relative mx-auto py-12 px-2">
 
-        <h2 class="w-full my-2 text-6xl font-bold leading-tight text-center text-white-800">
-            Frequently Asked Questions
+        <h2 class="w-full my-2 text-6xl font-medium leading-tight text-center text-white-800 montserrat">
+            FAQ
         </h2>
 
+        <div class="flex flex-row items-center justify-center">
 
-        <div class="my-6">
-            <div
-                    class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
-                <h4 class="text-lg font-medium">How do I create an account on the website?</h4>
+            <div class="w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+                >
+                    <h4 class="text-lg font-medium">Qu'est-ce que Spiritu'L ?</h4>
+                </div>
+                <div
+                        class="w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-bg-black border-teal-600/30 bg-teal-100/50 px-4 py-4px-4 py-4 text-teal-800"
+                        style="border: 1px solid black"
+
+                >
+                    <h5 class="text-2xl">
+                        Spiritu'L est la première application de méditation francophone dédiée aux musulmans,<br/>combinant
+                        la pleine conscience et la spiritualité islamique pour un bien-être quotidien,
+                    </h5>
+                </div>
             </div>
-            <div
-                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
-                <h5>
-                    To create an account, click on the "Sign Up" button located at the top right corner of the homepage.
-                    <br>
-                    Fill out the required information, including your name, email address, and password.
-                    <br>
-                    Click "Create Account" to complete the registration process.
-                </h5>
+
+            <div class=" w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+                >
+                    <h4 class="text-lg font-medium">Qu'est-ce que Spiritu'L ?</h4>
+                </div>
+                <div
+                        class="w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-bg-black border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800"
+                        style="border: 1px solid black"
+
+                >
+                    <h5 class="text-2xl">
+                        Spiritu'L est la première application de méditation francophone dédiée aux musulmans,<br/>combinant
+                        la pleine conscience et la spiritualité islamique pour un bien-être quotidien,
+                    </h5>
+                </div>
             </div>
-        </div>
 
 
-        <div class="my-6">
-            <div
-                    class="rounded-t-2xl bg-teal-600/80 w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
-                <h4 class="text-lg font-medium">What payment methods do you accept?</h4>
+            <div class=" w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+                >
+                    <h4 class="text-lg font-medium">Comment Spiritu'L peut-elle m'aider dans ma vie quotidienne ?</h4>
+                </div>
+                <div
+                        class="w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                    <h5 class="text-2xl">
+                        Elle vous aide à gérer le stress, à améliorer votre concentration dans la prière, à alléger
+                        votre charge mentale,<br/> et à vous détendre en fusionnant bien-être mental et spirituel.
+                    </h5>
+                </div>
             </div>
-            <div
-                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
-                <h5>We accept several payment methods for your convenience, including credit cards (Visa, Mastercard,
-                    American Express), PayPal, and Apple Pay.
-                </h5>
+
+            <div class="w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+
+                >
+                    <h4 class="text-lg font-medium">Est-ce que l'application est gratuite ?</h4>
+                </div>
+                <div
+                        class="w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                    <h5 class="text-2xl">
+                        Shipping times may vary depending on your location and the product you ordered.
+                        <br>
+                        We strive to process and ship orders within 1-2 business days after payment confirmation.
+                    </h5>
+                </div>
             </div>
-        </div>
+
+            <div class=" w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+
+                >
+                    <h4 class="text-lg font-medium">Quel type de méditations propose Spiritu'L ?</h4>
+                </div>
+                <div
+                        class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                    <h5 class="text-2xl">
+
+                        Elle propose des méditations inspirées des 99 Noms d'Allah, ainsi que des sessions spécifiques
+                        pour
+                        réduire le stress, améliorer la concentration dans la prière et se détendre.
+                    </h5>
+                </div>
+            </div>
 
 
-        <div class="my-6">
-            <div
-                    class="rounded-t-2xl bg-teal-600/80 w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white">
-                <h4 class="text-lg font-medium">How long does shipping take?</h4>
+            <div class="w-full md:w-1/2">
+                <div
+                        class="rounded-t-2xl bg-teal-600/80  w-full cursor-pointer select-none border-2 border-teal-600/30 px-4 py-4 text-gray-100 transition duration-300 hover:border-teal-600/80 hover:text-white bg-pink-600"
+
+                >
+                    <h4 class="text-lg font-medium">Est-ce que l’application est gratuite ?</h4>
+                </div>
+                <div
+                        class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
+                    <h5 class="text-2xl">
+
+                        Shipping times may vary depending on your location and the product you ordered.
+                        <br>
+                        We strive to process and ship orders within 1-2 business days after payment confirmation.
+                    </h5>
+                </div>
             </div>
-            <div
-                    class="inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-teal-600/30 bg-teal-100/50 px-4 py-4 text-teal-800">
-                <h5>
-                    Shipping times may vary depending on your location and the product you ordered.
-                    <br>
-                    We strive to process and ship orders within 1-2 business days after payment confirmation.
-                </h5>
-            </div>
+
+
         </div>
 
 
     </section>
 
     <!--Footer-->
-    <footer class="text-center py-5" style="background-color: #fff3f7">
+<footer class="text-center py-5" style="background-color: #ffedf1">
         <p class="text-2xl mb-8 color-black w-full text-center">La première application de méditation
             francophone pour les <span class="text-pink-600 montserrat font-bold">musulmans.</span>
         </p>
-        <div class="container px-5 w-full text-center">
+    <div class="px-5 w-full text-center">
 
 
                 <div class="mb-2">© Spiritu'L 2024. All Rights Reserved.</div>
