@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fea936b7-5ad2-4e69-827a-abc84459d71e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/14-test-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/14-test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meditation_guidee_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,6 +214,7 @@
       <workItem from="1728824073412" duration="12830000" />
       <workItem from="1729021454942" duration="5463000" />
       <workItem from="1729425969714" duration="15157000" />
+      <workItem from="1734872688252" duration="3358000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Introduce card rotation">
       <option name="closed" value="true" />
